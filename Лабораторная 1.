@@ -1,0 +1,146 @@
+# PR1_Chistousov_lab_rab_1
+<!DOCTYPE HTML>
+<html>
+<head> </head>
+<body>
+
+<script>
+
+function task1()
+{  
+   var n=prompt("Введите количество членов числовой последовательности","");
+
+   var a, b = 0;
+
+   for ( var i=0;i<n;i++)
+   {
+    a = Math.round(2+15*Math.random());
+    if (a%2==1) 
+       {
+        b++;
+       }
+    document.write(a+";","");
+   }
+   document.write("Количество членов являющихся нечетными: "+b+"","");
+}
+
+function task2()
+{
+   var n=prompt("Введите количество членов числовой последовательности","");
+
+   var a, b = 0;
+
+   for ( var i=0;i<n;i++)
+   {
+    a = Math.round(2+15*Math.random());
+    if (a%3==0 && !(a%5==0))
+     
+       {
+        b++;
+       }
+    document.write(a+";","");
+   }
+   document.write("Количество членов кратных 3 и не кратных 5: "+b+"","");
+}
+
+function task3()
+{
+   var n=prompt("Введите количество членов числовой последовательности","");
+
+   var a = 1;
+   var b = 0;
+   var q = 0; 
+   for ( var i=0;i<n;i++)
+   { 
+    document.write(a+";");
+    a=a+1;
+    b = Math.sqrt(a);
+    if(b%2==0)
+    {
+     q++;
+    }
+   }
+   document.write("Количество членов являющихся квадратами четных чисел: "+q+"","");
+   
+}
+function task4()
+{ 
+   var b = 0;
+   var arr = [], mas=[];
+   
+   for (var i=0;i<10;i++)
+   { arr[i]=2+Math.floor(Math.random()*20);
+     mas.push(arr[i]);
+   }
+   for( var i=1; i<10 ;i++)
+   {  
+    if (arr[i]<((arr[i-1]+arr[i+1])/2) )
+       {
+        b++;
+       }
+   }
+   alert("Массив: "+mas.join(" ")+",\nКоличество элементов удовлетворяющих условию (a[k]<((a[k-1]+a[k+1])/2)):"+b )    
+}
+
+var num = i;
+function func(n) 
+    {     
+   var f=1;     
+    for(i=1;i<=n;i++) 
+    f=f*i;     
+    return (f);     
+    }   
+
+function task5()
+{ 
+   var b = 0;
+   var arr = [], mas=[];
+
+   for (var i=0;i<10;i++)
+   {
+     arr[i]=2+Math.floor(Math.random()*20);
+     mas.push(arr[i]);
+   }
+   for( var i=1; i<10 ;i++)
+   {
+      
+  var x=i;
+  var y=func(x);        
+   if ((2^i) < arr[i] && arr[i]<y )
+       {
+        b++;
+       }
+    }
+   alert("Массив: "+mas.join(" ")+",\nКоличество элементов удовлетворяющих условию ((2^k) < a[k] <k!):"+b )    
+}
+
+function task6()
+{  
+   var n=prompt("Введите количество членов числовой последовательности","");
+
+   var a, b = 0;
+
+   for ( var i=0;i<n;i++)
+   {
+    a = Math.round(2+15*Math.random());
+
+    if (((i+1)%2==0) && !(a%2==0))
+       {
+        b++;
+       }
+    document.write(a+";","");
+   }
+   document.write("Количество членов имеющих четные порядковые номера и являющихся нечетными числами: "+b+"","");
+}
+
+</script>
+
+<button onclick="task1()">а)</button>
+<button onclick="task2()">б)</button>
+<button onclick="task3()">в)</button>
+<button onclick="task4()">г)</button>
+<button onclick="task5()">д)</button>
+<button onclick="task6()">е)</button>
+</body>
+</html>
+
